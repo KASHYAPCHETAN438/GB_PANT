@@ -1,0 +1,82 @@
+git clone hota kya hai?
+Jab aap git clone command run karte ho, toh Git ek remote repository ka pura data download karta hai.
+Isme:
+Repository ke files (code, documents, etc.).
+Unka history (commits, branches, etc.).
+Git configuration (remote ka URL, branches ki details). Sab kuch aapke local system me aajata hai.
+
+
+===============================================================================================
+
+ Ek Baar Clone karne ke baad kya karein?
+Folder ke andar jaane ke liye:
+     ex:     cd repository-name
+
+
+Git commands run kar sakte ho:
+   1. git status (repository ka status dekhna)
+   2. git pull (latest changes fetch karna)
+   3. git add, git commit, git push (changes ko save aur push karna)
+
+
+======================================================================================================
+
+1. git add
+Ye command files ko staging area me dalne ke liye use hota hai.
+Staging area ka matlab hai ki jo files/changes aap commit karna chahte ho, unhe temporarily track karna.
+Syntax:
+git add <file-name>
+Ya sabhi files ko stage karne ke liye:
+git add .
+Kaam kaise karta hai?
+Aapka kaam karta file ko Git pe track karne ke liye ready karta hai.
+Bas add karne ke baad wo commit ke liye available ho jaati hai.
+Example:
+Ek nayi file example.txt banayi:
+echo "Hello World" > example.txt
+Ab file ko stage karne ke liye:
+git add example.txt
+Agar saari files stage karni ho:
+git add .
+===========================================================================================================
+2. git commit
+Ye command aapke staged changes ko ek snapshot ki tarah Git repository me save karta hai.
+Aap ek specific message ke saath commit karte ho, jo batata hai ki aapne kya changes kiye.
+Syntax:
+git commit -m "Your commit message"
+Kaam kaise karta hai?
+git add ke baad changes ko permanently repository me save karta hai.
+Har commit ek unique ID (hash) ke saath aata hai.
+Example:
+File ko stage kar liya:
+git add example.txt
+Changes commit karte hain:
+git commit -m "Added example.txt file"
+===========================================================================================================
+3. git push
+Ye command local repository ke changes ko remote repository (e.g., GitHub, GitLab) me upload karne ke liye use hota hai.
+Syntax:
+git push <remote-name> <branch-name>
+Zyada tar cases me:
+git push origin main
+Kaam kaise karta hai?
+Aapka local kaam (commits) remote server par save kar deta hai.
+Remote repository ke saath aapka kaam share ho jata hai.
+Example:
+Commit ke baad:
+git push origin main
+Agar first time push kar rahe ho toh:
+git push -u origin main
+==================================================================================================================
+4. git pull
+Ye command remote repository ke latest changes ko aapki local repository me download karne ke liye use hota hai.
+Syntax:
+git pull <remote-name> <branch-name>
+Usually:
+git pull origin main
+Kaam kaise karta hai?
+Remote repository me agar nayi changes hain, toh wo aapke local system me sync kar deta hai.
+Agar local aur remote ke changes conflict karte hain, toh Git merge karne ke liye bolega.
+Example:
+Latest updates pull karne ke liye:
+git pull origin main
