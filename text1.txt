@@ -80,3 +80,6 @@ Agar local aur remote ke changes conflict karte hain, toh Git merge karne ke liy
 Example:
 Latest updates pull karne ke liye:
 git pull origin main
+============================================================================
+    FLOW
+      insert==>add==>commit==>push
