@@ -1,0 +1,3 @@
+Wellcome to edunet foundation
+Introduce to python 
+Introduce to machine learning
