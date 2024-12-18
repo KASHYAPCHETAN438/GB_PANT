@@ -1,0 +1,19 @@
+This file tell me how to work pull command 
+
+Git ka git pull command ek combination hota hai do commands ka:
+1. git fetch
+2. Remote repository ke latest changes ko download karta hai, lekin unhe merge nahi karta.
+
+git merge--> Downloaded changes ko aapke local branch me merge karta hai.
+            Toh git pull dono steps ek saath karta hai — fetch aur merge.
+            Syntax of git pull
+            git pull <remote-name> <branch-name>
+            
+Default: Agar remote aur branch specify nahi kiya, toh Git default remote (usually origin) aur current branch ka use karega.
+          Example:
+                git pull origin main
+
+                
+Kaam kaise karta hai?
+  Remote repository me jo bhi latest commits hain, wo aapki local repository me fetch karta hai.
+  Uske baad un changes ko aapke current branch me merge karta hai.
